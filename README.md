@@ -1,21 +1,21 @@
-Sales Data Pipeline
+# Sales Data Pipeline
 
-Overview
+## Oerview
 This project implements a data pipeline to process sales data and generate daily reports for an e-commerce business. The pipeline ingests sales data from multiple sources (web app, mobile app, physical stores), cleans and refines the data, calculates total sales and revenue, and outputs aggregated daily reports.
 
 The pipeline is designed to handle large data volumes, multiple files, and ensures robust error handling and logging.
 
-Business Context
+## Business Context
 The e-commerce company collects daily sales data from:
 Web app and Mobile app (online sales)
 Physical stores (uploaded CSV files)
 
-Reports Needed:
+## Reports Needed:
 Total sales per channel
 Top 5 best-selling products
 Total revenue per day
 
-
+```
 Folder Structure
 sales_data_pipeline/
 │
@@ -36,9 +36,10 @@ sales_data_pipeline/
 ├─ run_pipeline.py        # Main pipeline script
 ├─ README.md              # Project documentation
 
+```
 
 
-How the Pipeline Works
+## How the Pipeline Works
 
 1. Data Ingestion
 read_sources(root_path) dynamically reads all CSV/JSON files in the data/ folder.
@@ -53,38 +54,19 @@ Ensures required columns exist; fills missing columns with default values.
 quantity → integer
 price_per_unit → float
 timestamp → datetime
-
 Removes duplicates based on product_id, timestamp, channel, and store_id.
 
 Handles missing or invalid values:
 Missing product_id, channel, store_id → "Unknown"
 Negative or unrealistically high values filtered out
 
-Adds derived columns:
+## Adds derived columns:
 revenue = quantity * price_per_unit
 year, month, day extracted from timestamp
 ingested_at → current timestamp for pipeline run
 
-3. Aggregations
 
-Total sales and revenue by channel:
-
-df_report = df_clean.groupby("channel").agg(
-    total_sales=('quantity', 'sum'),
-    total_revenue=('revenue', 'sum')
-).reset_index()
-
-
-Top 5 best-selling products:
-
-df_top_products = df_clean.groupby("product_id").agg(
-    total_quantity=('quantity', 'sum'),
-    total_revenue=('revenue', 'sum')
-).sort_values(by="total_quantity", ascending=False).head(5).reset_index()
-
-The aggregation handles missing columns safely.
-
-4. Output Reports
+## Output Reports
 
 Reports are saved as CSVs in: output/Daily_reports/date=<YYYY-MM-DD>/
 Includes:
@@ -92,7 +74,7 @@ report.csv → Total sales and revenue per channel
 top_products.csv → Top 5 products by quantity and revenue
 Each report also includes the pipeline run timestamp.
 
-Logging & Error Handling
+## Logging & Error Handling
 All pipeline steps are logged to logs/pipeline.log and console.
 
 Handles:
@@ -102,26 +84,25 @@ Invalid data types
 Warnings are logged for data issues instead of failing the pipeline.
 Exceptions are captured, and pipeline stops gracefully with an error message.
 
-Scalability Considerations
+## Scalability Considerations
 Designed to handle large volumes of files:
 Reads all files dynamically
 Can process multiple CSVs/JSONs simultaneously
 Uses vectorized Pandas operations for speed
 
-Easily extendable to:
+## Easily extendable to:
 Add more channels
 Support new data sources (e.g., APIs, databases)
 Store output in databases (e.g., PostgreSQL, Snowflake)
 Can be parallelized using Dask or Spark for very large datasets.
 
-Future Extensibility
+## Future Extensibility
 Database Storage: Store refined data and reports in a database for historical queries.
 Incremental Loading: Track last processed timestamp and load only new records.
 Alerting: Send email alerts on missing data or pipeline failure.
 Visualization: Generate dashboards automatically from daily reports.
 
-How to Run
-
+## How to Run
 Place all input CSV/JSON files in the data/ folder.
 
 Ensure all required Python packages are installed:
@@ -129,8 +110,9 @@ Ensure all required Python packages are installed:
 pip install pandas
 
 Run the pipeline:
+
 python run_pipeline.py
 
-
 Check the output/Daily_reports/ folder for the reports.
+
 Logs are written to logs/pipeline.log.

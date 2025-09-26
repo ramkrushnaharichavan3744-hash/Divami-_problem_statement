@@ -1,0 +1,9 @@
+timestamp,product_id,channel,quantity,price_per_unit
+2025-09-12 09:00:00,P202,mobile_app,2,400
+2025-09-12 09:05:00,P789,mobile_app,5,300
+2025-09-12 09:10:00,P123,mobile_app,5,200
+2025-09-12 09:15:00,P123,mobile_app,4,100
+2025-09-12 09:20:00,P101,mobile_app,4,300
+2025-09-12 09:25:00,P202,mobile_app,3,200
+2025-09-12 09:30:00,P202,mobile_app,3,200
+2025-09-12 09:35:00,P123,mobile_app,2,100

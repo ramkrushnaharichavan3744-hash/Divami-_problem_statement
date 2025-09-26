@@ -1,0 +1,58 @@
+2025-09-26 13:49:22,778 - INFO - All source files read successfully
+2025-09-26 13:49:22,793 - INFO - Column standardization completed
+2025-09-26 13:49:22,807 - ERROR - Pipeline failed: cannot reindex on an axis with duplicate labels
+2025-09-26 13:50:13,626 - ERROR - Error reading input files: No objects to concatenate
+2025-09-26 13:50:13,626 - ERROR - Pipeline failed: No objects to concatenate
+2025-09-26 13:51:36,710 - ERROR - Error reading input files: No objects to concatenate
+2025-09-26 13:51:36,711 - ERROR - Pipeline failed: No objects to concatenate
+2025-09-26 13:52:46,478 - ERROR - Pipeline failed: read_sources() missing 1 required positional argument: 'root_path'
+2025-09-26 13:54:59,831 - INFO - Read 1 CSV files and 0 JSON files successfully.
+2025-09-26 13:54:59,833 - INFO - Column standardization completed
+2025-09-26 13:54:59,836 - INFO - Data cleaning completed. Removed 0 invalid rows.
+2025-09-26 13:54:59,851 - INFO - Aggregated total sales and revenue by channel
+2025-09-26 13:54:59,857 - INFO - Computed top 5 best-selling products
+2025-09-26 13:54:59,862 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:03:55,392 - INFO - Read 1 CSV files and 0 JSON files successfully.
+2025-09-26 14:03:55,401 - ERROR - Pipeline failed: Index(['store_id'], dtype='object')
+2025-09-26 14:06:34,873 - INFO - Read 1 CSV files and 0 JSON files successfully.
+2025-09-26 14:06:34,892 - INFO - Refined sales data: 8 rows after cleaning
+2025-09-26 14:06:34,894 - ERROR - Pipeline failed: "Column(s) ['revenue'] do not exist"
+2025-09-26 14:08:24,100 - INFO - Read 1 CSV files and 0 JSON files successfully.
+2025-09-26 14:08:24,110 - INFO - Refined sales data: 8 rows after cleaning
+2025-09-26 14:08:24,110 - WARNING - 'revenue' column missing and cannot be derived, filled with 0
+2025-09-26 14:08:24,133 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:09:44,757 - INFO - Read 2 CSV files and 2 JSON files successfully.
+2025-09-26 14:09:44,759 - INFO - Column standardization completed
+2025-09-26 14:09:44,763 - ERROR - Pipeline failed: cannot reindex on an axis with duplicate labels
+2025-09-26 14:10:23,751 - ERROR - Pipeline failed: read_sources() takes 0 positional arguments but 1 was given
+2025-09-26 14:10:44,669 - INFO - Read 2 CSV files and 2 JSON files successfully.
+2025-09-26 14:10:44,674 - ERROR - Pipeline failed: arg must be a list, tuple, 1-d array, or Series
+2025-09-26 14:11:05,203 - INFO - Read 2 CSV files and 0 JSON files successfully.
+2025-09-26 14:11:05,212 - INFO - Refined sales data: 18 rows after cleaning
+2025-09-26 14:11:05,212 - WARNING - 'revenue' column missing and cannot be derived, filled with 0
+2025-09-26 14:11:05,229 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:19:35,068 - INFO - Read 2 CSV files and 0 JSON files successfully.
+2025-09-26 14:19:35,076 - INFO - Refined sales data: 18 rows after cleaning
+2025-09-26 14:19:35,097 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:21:55,156 - INFO - Read 2 CSV files and 0 JSON files successfully.
+2025-09-26 14:21:55,166 - INFO - Refined sales data: 18 rows after cleaning
+2025-09-26 14:21:55,190 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:21:55,190 - INFO - Pipeline executed in 0.04 seconds
+2025-09-26 14:27:53,091 - INFO - Read 2 CSV files and 0 JSON files successfully.
+2025-09-26 14:27:53,103 - INFO - Refined sales data: 18 rows after cleaning
+2025-09-26 14:27:53,128 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:29:08,864 - INFO - Read 3 CSV files and 0 JSON files successfully.
+2025-09-26 14:29:08,879 - INFO - Refined sales data: 67 rows after cleaning
+2025-09-26 14:29:08,897 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:29:41,269 - INFO - Read 1 CSV files and 0 JSON files successfully.
+2025-09-26 14:29:41,278 - INFO - Refined sales data: 50 rows after cleaning
+2025-09-26 14:29:41,294 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:38:15,806 - INFO - Read 3 CSV files and 0 JSON files successfully.
+2025-09-26 14:38:15,815 - INFO - Refined sales data: 67 rows after cleaning
+2025-09-26 14:38:15,832 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:43:30,728 - INFO - Read 3 CSV files and 0 JSON files successfully.
+2025-09-26 14:43:30,740 - INFO - Refined sales data: 67 rows after cleaning
+2025-09-26 14:43:30,755 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
+2025-09-26 14:52:23,153 - INFO - Read 3 CSV files and 0 JSON files successfully.
+2025-09-26 14:52:23,162 - INFO - Refined sales data: 67 rows after cleaning
+2025-09-26 14:52:23,177 - INFO - Reports successfully written to output/Daily_reports/date=2025-09-26
